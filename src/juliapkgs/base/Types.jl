@@ -1,6 +1,12 @@
+type Payoff
+  id::Int
+end
+
 # Moves are owned by nodes and represent decisions for each player in the game.
 type Move
-
+  id::Int
+  name::String
+  payoffs::Array{Payoff,1}
 end
 
 # Nodes are owned by players and represent decision points for each of the players in the game. They
@@ -9,6 +15,7 @@ end
 type Node
   id::Int
   name::String
+  moves::Array{Move,1}
 end
 
 # Players are the fundamental aspect of the game; they have decision points called nodes, and moves
@@ -18,6 +25,7 @@ type Player
   id::Int
   name::String
   nodes::Array{Node,1}
+  payoff::Payoff
 end
 
 type Infoset
@@ -25,6 +33,10 @@ type Infoset
   name::String
   nodes::Array{Node,1}
 end
+
+
+
+
 
 
 

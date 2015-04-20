@@ -1,1 +1,1 @@
-Common base files for all the julia packages included in this project. 
+This folder is the common julia source code that is used for all the projects within the pragmatic-edge software toolset suite. 
